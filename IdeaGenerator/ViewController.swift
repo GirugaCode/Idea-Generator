@@ -10,31 +10,47 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let answers = ["Yes, definitely", "It is certain", "Without a doubt", "Yes", "Most likely", "Sure, why not?", "Same", "Tell me more", "Out to lunch", "Reply hazy, try again", "Ask again later", "The cake is a lie", "42", "TMI", "Very doubtful", "Don't count on it", "My reply is no", "Absolutely not"]
-    @IBOutlet weak var answerLabel: UILabel!
-    @IBOutlet weak var shakeButton: UIButton!
+    let ideas = ["Make School", "Uber", "Netflix", "Facebook", "Google", "Kickstarter", "Spotify", "Airbnb", "Snapchat", "YouTube", "Dropbox", "Amazon", "Craigslist", "Tinder", "Instagram", "Tesla", "Twitter", "SpaceX"]
     
+    let platforms = ["Dogs", "Books", "Gamers", "Star Wars", "Bitcoin", "Goats", "Zombies", "Rich People", "Swimmers", "Florida", "Vampires", "Dragons", "Internet of Things", "Mars", "Cryptocurrency", "Mosquito Repellent", "Fidget Spinners", "Sun Screen", "Water Bottles", "Lost Travelers", "Superheroes"]
+    
+
+    @IBOutlet weak var ideaLabel: UILabel!
+    @IBOutlet weak var platformLabel: UILabel!
+    @IBOutlet weak var shakeButton: UIButton!
+    @IBOutlet weak var forLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    func generateAnswer() {
-        let maxIndex = UInt32(answers.count)
+    func generateIdeasAndPlatforms() {
+        let maxIndex = UInt32(ideas.count)
         let randomIndex = Int(arc4random_uniform(maxIndex))
-        
-        answerLabel.text = answers[randomIndex]
+        ideaLabel.text = ideas[randomIndex]
+        platformLabel.text = platforms[randomIndex]
     }
+    
+    func generateRandomColor() -> UIColor {
+        let hue : CGFloat = CGFloat(arc4random() % 256) / 256 // use 256 to get full range from 0.0 to 1.0
+        let saturation : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.5 // from 0.5 to 1.0 to stay away from white
+        let brightness : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.5 // from 0.5 to 1.0 to stay away from black
+        
+        return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 1)
+    }
+    
 
     @IBAction func shakeButtonTapped(_ sender: Any) {
-        generateAnswer()
+        generateIdeasAndPlatforms()
+        self.view.backgroundColor = generateRandomColor()
+        
     }
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         guard motion == .motionShake else { return }
-        
-        generateAnswer()
+        generateIdeasAndPlatforms()
+        self.view.backgroundColor = generateRandomColor()
     }
     
 }

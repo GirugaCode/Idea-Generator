@@ -22,34 +22,62 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="c0O-7m-iuW"/>
                                 </constraints>
-                                <state key="normal" title="Shake It"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <state key="normal" title="Randomize!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="shakeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aJV-KL-Vbg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have a question?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XO7-rk-mep">
-                                <rect key="frame" x="46" y="104" width="283" height="135"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An Idea" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XO7-rk-mep">
+                                <rect key="frame" x="46" y="69" width="283" height="135"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="135" id="pCp-Me-rbT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Platform" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQu-hZ-AJN">
+                                <rect key="frame" x="46" y="244" width="283" height="135"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="5mA-Sz-6Jx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="for" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVN-dH-0KY">
+                                <rect key="frame" x="175" y="212" width="24" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="XO7-rk-mep" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="0JI-RC-gi6"/>
+                            <constraint firstItem="OPk-HV-YZa" firstAttribute="top" secondItem="dQu-hZ-AJN" secondAttribute="bottom" constant="343" id="B8E-45-yzB"/>
+                            <constraint firstItem="dQu-hZ-AJN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="C1c-YX-Rdd"/>
                             <constraint firstItem="XO7-rk-mep" firstAttribute="centerX" secondItem="OPk-HV-YZa" secondAttribute="centerX" id="LJ7-wS-NqN"/>
                             <constraint firstItem="OPk-HV-YZa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Rfu-ZH-Idf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dQu-hZ-AJN" secondAttribute="trailing" constant="46" id="YDX-Np-gA6"/>
                             <constraint firstItem="XO7-rk-mep" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z6C-DO-YV8"/>
+                            <constraint firstItem="dQu-hZ-AJN" firstAttribute="top" secondItem="lVN-dH-0KY" secondAttribute="bottom" constant="8" id="ctT-Ol-zng"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lVN-dH-0KY" secondAttribute="trailing" constant="176" id="dub-Em-BAp"/>
                             <constraint firstAttribute="bottom" secondItem="OPk-HV-YZa" secondAttribute="bottom" constant="20" symbolic="YES" id="feX-TW-B9L"/>
-                            <constraint firstItem="XO7-rk-mep" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="lpK-aB-v05"/>
+                            <constraint firstItem="XO7-rk-mep" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="lpK-aB-v05"/>
+                            <constraint firstItem="dQu-hZ-AJN" firstAttribute="top" secondItem="lVN-dH-0KY" secondAttribute="bottom" constant="8" id="srp-cs-iSy"/>
+                            <constraint firstItem="lVN-dH-0KY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="175" id="tDV-KJ-r3T"/>
+                            <constraint firstItem="lVN-dH-0KY" firstAttribute="top" secondItem="XO7-rk-mep" secondAttribute="bottom" constant="8" id="yce-kH-XFO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="answerLabel" destination="XO7-rk-mep" id="GSJ-np-7Ku"/>
+                        <outlet property="forLabel" destination="lVN-dH-0KY" id="7GW-Te-jf9"/>
+                        <outlet property="ideaLabel" destination="XO7-rk-mep" id="6T0-ci-Gca"/>
+                        <outlet property="platformLabel" destination="dQu-hZ-AJN" id="VsJ-4V-rwX"/>
                         <outlet property="shakeButton" destination="OPk-HV-YZa" id="Bzl-Kn-mIc"/>
                     </connections>
                 </viewController>
