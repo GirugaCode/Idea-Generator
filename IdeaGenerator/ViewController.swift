@@ -25,6 +25,19 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+
+    @IBAction func shakeButtonTapped(_ sender: Any) {
+        generateIdeasAndPlatforms()
+        self.view.backgroundColor = generateRandomColor()
+        
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        guard motion == .motionShake else { return }
+        generateIdeasAndPlatforms()
+        self.view.backgroundColor = generateRandomColor()
+    }
+    
     func generateIdeasAndPlatforms() {
         let maxIndex = UInt32(ideas.count)
         let randomIndex = Int(arc4random_uniform(maxIndex))
@@ -40,18 +53,6 @@ class ViewController: UIViewController {
         return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 1)
     }
     
-
-    @IBAction func shakeButtonTapped(_ sender: Any) {
-        generateIdeasAndPlatforms()
-        self.view.backgroundColor = generateRandomColor()
-        
-    }
-    
-    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        guard motion == .motionShake else { return }
-        generateIdeasAndPlatforms()
-        self.view.backgroundColor = generateRandomColor()
-    }
     
 }
 
